@@ -5,8 +5,14 @@ import play.api.mvc._
 
 object Application extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+	val title = "Get Fit This Way!"
+
+  def gotoIndex = Action {
+    Ok(views.html.index(title))
+  }
+
+  def gotoPlanRun = Action {
+  	Ok(views.html.Planners.run(title))
   }
 
 }
